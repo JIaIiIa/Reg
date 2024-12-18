@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Aeroport;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #FFF;
+    font-family: "ANS";
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+}
+
+.subtitle-style {
+    color: #879399;
+    font-family: Aeroport;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn-style {
+    border-radius: 7px;
+    background: #FF4800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Aeroport;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
