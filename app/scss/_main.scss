@@ -25,6 +25,7 @@
 
 .hero__content--right {
     overflow: hidden;
+    position: relative;
 }
 
 .hero__content--left {
@@ -96,5 +97,123 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 
+}
+
+.hero__content--right .swiper-pagination {
+    color: #FFF;
+    font-family: Aeroport;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    border-bottom: 1px solid #53575B;
+    width: max-content;
+    height: max-content;
+    padding-bottom: 8px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #FFF;
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    &.active::after {
+        animation: swiperLine 6s ease-in-out;
+    }
+
+}
+
+@keyframes swiperLine {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.hero__inner--bottom {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.priority-list {
+    display: flex;
+    gap: 30px;
+}
+
+.priority-list__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 7px;
+    background: #191B1D;
+    padding: 25px 20px;
+    max-width: 282px;
+}
+
+.priority-list__item--img {
+    max-width: 44px;
+    aspect-ratio: 44/44;
+    object-fit: cover;
+    object-position: center;
+}
+
+.socials {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.socials-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.catalog__filtres {
+    display: flex;
+    gap: 10px;
+}
+
+.catalog__filtres-item {
+    padding: 14px 25px;
+    border-radius: 7px;
+    background: transparent;
+    color: black;
+
+    &.active {
+        background: #141517;
+        color: white;
+    }
+}
+
+.button-all {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.padding-inner {
+    padding: 80px 0;
+}
+
+.catalog__title {
+    padding-bottom: 20px;
 }

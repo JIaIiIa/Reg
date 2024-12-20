@@ -14,10 +14,29 @@ new Swiper('.hero__content--right', {
     speed: 1000,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
     },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+    },
+    on: {
+        slideChange: resetAnimation,
+        init: resetAnimation
+    }
 });
+function resetAnimation() {
+    const slideAnima = document.querySelector('.hero__content--right .swiper-pagination');
+    if (slideAnima) {
+        slideAnima.classList.remove('active');
+        setTimeout(() => {
+            slideAnima.classList.add('active');
+        }, 500);
+    }
+}
+
+
 
 
 const titleMain = document.querySelector('.hero__title');
